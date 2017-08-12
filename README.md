@@ -10,7 +10,7 @@ Aplicação didática para palestra com o título: "Hazelcast: Dê um UP na sua 
 ## Iniciar a aplicação
 __mvn spring-boot:run__
  
-Exemplos de chamada:
+### Exemplos de chamada:
 - curl 'http://localhost:8080/estado/all'
 - curl 'http://localhost:8080/cidade/ce'
 - curl 'http://localhost:8080/clear' 
