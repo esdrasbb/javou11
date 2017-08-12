@@ -32,7 +32,7 @@ public class Controller {
         this.estadoService = estadoService;
     }
 
-    @RequestMapping(path = "/estado/all",method = RequestMethod.GET)
+    @RequestMapping(path = "/estado/all", method = RequestMethod.GET)
     @ResponseBody
     public List<Estado> getEstados() {
         long start = nanoTime();
@@ -42,7 +42,7 @@ public class Controller {
         return estados;
     }
 
-    @RequestMapping(path = "/cidade/{siglaEstado}",method = RequestMethod.GET)
+    @RequestMapping(path = "/cidade/{siglaEstado}", method = RequestMethod.GET)
     @ResponseBody
     public List<Cidade> getCidadeByEstado(@PathVariable("siglaEstado") String sigla) {
         long start = nanoTime();
@@ -52,7 +52,7 @@ public class Controller {
         return cidades;
     }
 
-    @RequestMapping(path = "/clear",method = RequestMethod.GET)
+    @RequestMapping(path = "/clear", method = RequestMethod.GET)
     @ResponseBody
     public String clearCache() {
         estadoService.clearCache();

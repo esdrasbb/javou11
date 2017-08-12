@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Entity
-public class Cidade implements Serializable{
+public class Cidade implements Serializable {
 
     private static final long serialVersionUID = -2905184815258073634L;
 

@@ -32,7 +32,7 @@ public class EstadoService {
     }
 
     @Cacheable()
-    public List<Estado> getAll(){
+    public List<Estado> getAll() {
         log.info("Executing: {}.getAll();", this.getClass().getSimpleName());
         List<Estado> estados = new ArrayList<>();
         estadoRepository.findAll().forEach(estados::add);
