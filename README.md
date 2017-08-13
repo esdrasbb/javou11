@@ -2,6 +2,10 @@
 
 Aplicação didática para palestra com o título: "Hazelcast: Dê um UP na sua aplicação"
 
+## O que vc precisa ter instalado na máquina
+- Maven 
+- PostgreSQL
+
 ## Banco de dados
 - Postgres 9.4
 - url: jdbc:postgresql://localhost:5432/hazelcast
