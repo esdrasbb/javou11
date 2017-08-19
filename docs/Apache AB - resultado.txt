@@ -1,0 +1,99 @@
+
+Banco Postgres - AWS RDS
+
+ab -n 100 -c 1 http://localhost:8080/estado/all
+
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /estado/all
+Document Length:        1148 bytes
+
+Concurrency Level:      1
+Time taken for tests:   67.661 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      126700 bytes
+HTML transferred:       114800 bytes
+Requests per second:    1.48 [#/sec] (mean)
+Time per request:       676.608 [ms] (mean)
+Time per request:       676.608 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.83 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:   636  676  65.6    644     829
+Waiting:      635  675  65.6    643     828
+Total:        636  676  65.6    644     829
+
+Percentage of the requests served within a certain time (ms)
+  50%    644
+  66%    648
+  75%    653
+  80%    797
+  90%    801
+  95%    814
+  98%    825
+  99%    829
+ 100%    829 (longest request)
+
+---------------------------------------------------------------------------------
+
+Hazelcast
+
+ab -n 100 -c 1 http://localhost:8080/estado/all
+
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /estado/all
+Document Length:        1148 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.821 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      126700 bytes
+HTML transferred:       114800 bytes
+Requests per second:    121.76 [#/sec] (mean)
+Time per request:       8.213 [ms] (mean)
+Time per request:       8.213 [ms] (mean, across all concurrent requests)
+Transfer rate:          150.66 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:     6    8   2.4      7      27
+Waiting:        5    7   2.3      6      26
+Total:          6    8   2.4      7      27
+
+Percentage of the requests served within a certain time (ms)
+  50%      7
+  66%      8
+  75%      8
+  80%      9
+  90%     10
+  95%     12
+  98%     13
+  99%     27
+ 100%     27 (longest request)
+
+
+

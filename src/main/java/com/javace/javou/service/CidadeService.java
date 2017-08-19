@@ -35,7 +35,7 @@ public class CidadeService {
         log.info("Executing: {}.clearCache();", this.getClass().getSimpleName());
     }
 
-    @Cacheable() //condition = "#instrument.equals('trombone')"
+    @Cacheable() //condition = "#sigla.equals('BA')"
     public List<Cidade> findBySiglaEstado(String sigla) {
         log.info("Executing: {}.findBySiglaEstado(\"{}\");", this.getClass().getSimpleName(), sigla);
         Optional<Estado> estado = estadoService.getAll().stream().filter(e -> e.getSigla().equals(sigla.toUpperCase())).findFirst();
